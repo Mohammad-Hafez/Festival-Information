@@ -216,9 +216,14 @@ form button{
 .messageLenght{
     color: var(--darkText-color);
 }
-#email{
+#email,#phone{
+    color:var(--text-color);
+    text-decoration: none;
+    transition: all .5s;
+}
+#email:hover,
+#phone:hover{
     color: var(--second-color);
-    cursor: pointer;
 }
 .socialIconsContainer .socialIcon{
 border: 1px solid var(--text-color);
@@ -241,4 +246,13 @@ color: var(--text-color);
 }
 .socialIconsContainer a{
     text-decoration: none;
+}
+#sitename{
+    color: var(--second-color);
+}
+#copyright p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    opacity: .9;
+    margin: 0;
 }

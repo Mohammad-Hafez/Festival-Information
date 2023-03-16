@@ -41,9 +41,10 @@ $(document).ready(function () {
 
   //SECTION - countdown function ---------
   (function countdown() {
-    let currentTiime = new Date().getTime();
+    let currentTiime = new Date();
+    let getTime = currentTiime.getTime();
     let eventTime = new Date(2023, 8, 12).getTime();
-    let remTime = eventTime - currentTiime;
+    let remTime = eventTime - getTime;
     let s = Math.floor(remTime / 1000);
     let m = Math.floor(s / 60);
     let h = Math.floor(m / 60);
@@ -59,6 +60,8 @@ $(document).ready(function () {
     $("#eMinute").html(m);
     $("#eSec").html(s);
     setTimeout(countdown, 1000);
+    // *NOTE - current year for copyright:
+    $("#currentYear").text(currentTiime.getFullYear());
   })();
 
   //SECTION - calc charchter in textmessage ----
